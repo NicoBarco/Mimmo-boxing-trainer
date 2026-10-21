@@ -1,52 +1,59 @@
-# Mimmo
+# MIMMO — Interactive Boxing Trainer
 
-**Mimmo** is a work-in-progress boxing training application written in Python using PySide6.
+**Work in progress | Python, PySide6, Arduino, C/C++**
 
-The project started as a software-based combination trainer and is intended to evolve into a physical interactive boxing training system using Arduino-controlled lights and hit sensors.
+Mimmo is a personal software and hardware project designed to create an interactive boxing training system.
 
-## Current Features
+The project started as a Python desktop application and has expanded into an Arduino-based physical controller, combining software development, real-time interaction, electronics and hardware integration.
 
-- PySide6 graphical interface
-- Configurable training rounds
-- Adjustable combination speed
-- Visual countdown before game starts
-- Boxing combinations loaded from JSON
-- Combination editor for creating and saving custom patterns
-- Adjustable randomisation of combinations
-- Defensive actions including slip, duck, block and weave
-- Visual target timing during training
+## Features
 
-## Project Structure
+### Python Desktop Application
+- Graphical interface built with Python and PySide6
+- Configurable training rounds and speed
+- Boxing combinations stored in JSON
+- Custom combination editor
+- Adjustable randomization of training sequences
+- Defensive actions and visual timing feedback
 
-- `app.py` — old test, bedfore switching to Q
-- `mimmo_qt.py` — main user interface
-- `mimmo_game_qt.py` — training and game logic
-- `mimmo_combo_qt.py` — combination editor
-- `combos.JSON` — combination data
-
-## Planned Development
-
-The next stage of the project is hardware integration.
-
-The planned physical trainer will use an Arduino connected to a boxing bag with six illuminated strike targets and an additional defensive-action indicator. Sensors will allow the application to detect whether the requested target was actually hit.
-
-Future development will include:
-
-- Arduino communication
-- Physical LED targets
-- Hit detection
-- Defensive-action detection
-- Training results and statistics
-
-## Status
-
-Mimmo is under active development.
-
-The current version represents a functional software prototype. Some features and architecture are expected to change as the hardware integration and input system are developed.
+### Arduino Controller (C/C++)
+- Arduino Nano-based standalone controller
+- LCD interface and infrared remote control
+- Adjustable training speed
+- Randomized punching sequences and defensive actions
+- LED target control and buzzer feedback
+- Training statistics and response evaluation
+- Experimental servo-controlled defensive mechanism
 
 ## Technologies
 
-- Python
-- PySide6
-- JSON
-- Arduino / C++ *(planned hardware integration)*
+- **Languages:** Python, C/C++
+- **GUI:** PySide6 / Qt
+- **Hardware:** Arduino Nano, LCD, LEDs, IR receiver, potentiometers and servo motors
+- **Data:** JSON
+- **Version control:** Git / GitHub
+
+## Project Structure
+
+```text
+mimmo/
+├── app.py
+├── combos.json
+├── mimmo_qt.py
+├── mimmo_game_qt.py
+├── mimmo_combo_qt.py
+├── arduino/
+│   └── mimmo_controller/
+│       └── mimmo_controller.ino
+└── README.md
+```
+
+## Development Status
+
+Mimmo is an ongoing prototype. The desktop application and Arduino controller are under active development, with continued work on hardware integration, training logic, scoring and physical feedback.
+
+The long-term goal is a standalone interactive boxing trainer capable of generating training sequences, detecting user responses and providing immediate feedback.
+
+## Author
+
+[NicoBarco](https://github.com/NicoBarco)
